@@ -1,0 +1,121 @@
+@use "../abstracts/" as *;
+
+.card_container {
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  .card {
+    border-radius: 4px !important;
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem;
+    cursor: pointer;
+    max-width: 100%;
+    height: 200px !important;
+    max-height: 100%;
+    .image_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .img {
+        height: 150px;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .ingredients {
+        display: none;
+        position: absolute;
+        bottom: 105%;
+        width: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $leather;
+        color: $white;
+        padding: 6px;
+        font-size: $font-small;
+        text-align: center;
+        border-radius: 4px;
+        z-index: 1px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -10%;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            background-color: $leather;
+            border-top: 1px solid $leather;
+            border-left: 1px solid $leather;
+          }
+      }
+    }
+    .image_container:hover {
+      .ingredients {
+        display: block;
+      }
+    }
+    .text_container {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      font-family: $font-family;
+      .text-head {
+        font-size: $font-extralarge;
+        color: $leather;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .sub-head {
+        font-size: $font-big;
+        color: $beer;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .sub-text {
+        font-size: $font-mid;
+        color: $leather;
+        margin-bottom: 6px;
+        text-align: left;
+      }
+      @media (max-width: 767px) {
+        .sub-text {
+          text-align: justify;
+        }
+      }
+    }
+  }
+  .card:hover {
+    box-shadow: none;
+    background-color: $jaffa;
+  }
+  @media (max-width: 1300px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .image_container {
+      .img {
+        height: 150px;
+        width: 100%;
+        max-width: 100px;
+        max-height: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(1, 1fr);
+    .card {
+      height: 200px !important;
+    }
+  }
+
+  @media (max-width: 570px) {
+    grid-template-columns: repeat(1, 1fr);
+    .card {
+      height: 310px !important;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+
+.nav-tabs {
+  border: none !important;
+  .nav-item {
+    flex-basis: auto !important;
+    flex-grow: 0 !important;
+    .nav-link {
+      font-family: $font-family !important;
+      border: none;
+      color: $dusty-gray;
+      font-size: $font-big;
+    }
+    .nav-link:hover {
+      border: none;
+      color: $leather;
+      font-weight: 600;
+    }
+    .active {
+      color: $leather;
+      font-weight: 600;
+    }
+  }
+}

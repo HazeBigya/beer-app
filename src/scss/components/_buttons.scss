@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+.addBeerBtn {
+  font-family: $font-family !important;
+  float: right;
+  border-radius: 4px !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  max-width: 200px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.addBeerBtn:hover {
+  box-shadow: none;
+}
+
+.loadMoreBtn {
+  font-family: $font-family !important;
+  display: flex;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: $blue;
+  font-weight: 600;
+}

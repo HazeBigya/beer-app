@@ -1,0 +1,202 @@
+.card_container {
+  display: grid;
+  row-gap: 1rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.card_container .card {
+  border-radius: 4px !important;
+  border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  cursor: pointer;
+  max-width: 100%;
+  height: 200px !important;
+  max-height: 100%;
+}
+.card_container .card .image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card_container .card .image_container .img {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.card_container .card .image_container .ingredients {
+  display: none;
+  position: absolute;
+  bottom: 105%;
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #434343;
+  color: #FFFFFF;
+  padding: 6px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 1px;
+}
+.card_container .card .image_container .ingredients:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background-color: #434343;
+  border-top: 1px solid #434343;
+  border-left: 1px solid #434343;
+}
+.card_container .card .image_container:hover .ingredients {
+  display: block;
+}
+.card_container .card .text_container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  font-family: "Poppins", sans-serif;
+}
+.card_container .card .text_container .text-head {
+  font-size: 20px;
+  color: #434343;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.card_container .card .text_container .sub-head {
+  font-size: 16px;
+  color: #ebc600;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.card_container .card .text_container .sub-text {
+  font-size: 14px;
+  color: #434343;
+  margin-bottom: 6px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .card_container .card .text_container .sub-text {
+    text-align: justify;
+  }
+}
+.card_container .card:hover {
+  box-shadow: none;
+  background-color: #f3f8fd;
+}
+@media (max-width: 1300px) {
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card_container .image_container .img {
+    height: 150px;
+    width: 100%;
+    max-width: 100px;
+    max-height: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .card_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card_container .card {
+    height: 200px !important;
+  }
+}
+@media (max-width: 570px) {
+  .card_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card_container .card {
+    height: 310px !important;
+  }
+}
+
+.nav-tabs {
+  border: none !important;
+}
+.nav-tabs .nav-item {
+  flex-basis: auto !important;
+  flex-grow: 0 !important;
+}
+.nav-tabs .nav-item .nav-link {
+  font-family: "Poppins", sans-serif !important;
+  border: none;
+  color: #9B9B9B;
+  font-size: 16px;
+}
+.nav-tabs .nav-item .nav-link:hover {
+  border: none;
+  color: #434343;
+  font-weight: 600;
+}
+.nav-tabs .nav-item .active {
+  color: #434343;
+  font-weight: 600;
+}
+
+.addBeerBtn {
+  font-family: "Poppins", sans-serif !important;
+  float: right;
+  border-radius: 4px !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  max-width: 200px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.addBeerBtn:hover {
+  box-shadow: none;
+}
+
+.loadMoreBtn {
+  font-family: "Poppins", sans-serif !important;
+  display: flex;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #076bc4;
+  font-weight: 600;
+}
+
+.beerImg {
+  max-height: 180px;
+  width: auto;
+  height: 100%;
+  margin-bottom: 0.6rem;
+}
+
+.noDataBox {
+  display: flex;
+  margin: auto;
+  padding: 2rem;
+  width: 800px;
+  height: 60vh;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #f3f8fd;
+}
+
+.sub-text {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #434343;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.sub-text .href-text {
+  color: #076bc4;
+  cursor: pointer;
+  font-weight: 600;
+}
